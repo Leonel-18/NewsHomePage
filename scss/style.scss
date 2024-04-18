@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
+
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%);
+
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body{
+    max-width: 1200px;
+    width: 1000px;
+    margin: 0px auto;
+    .head{
+        height: 150px;
+        .navBar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            .nav-items{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 30px;
+                list-style: none;
+
+                li{
+                    a{
+                        text-decoration: none;
+                        
+                    &:hover, :active{
+                        color: var(--soft-orange);
+                    }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .main{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        .content1{
+            grid-column: span 2;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+
+            .banner{
+                grid-column: span 2;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .title-content1{
+                
+                h1{
+                    font-size: 50px;
+                }
+            }
+
+            .contenido-text{
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: space-evenly;
+                gap: 20px;
+
+                p{
+                    padding: 0px 10px 0px 0px; 
+
+                }
+                .btn{
+                    padding: 15px 30px;
+                    text-transform: uppercase;
+                    letter-spacing: 5px;
+                    border: none;
+                    background-color: var(--soft-red);
+                    color: var(--off-white);
+                    cursor: pointer;
+
+                    &:hover, :active{
+                        background-color: var(--very-dark-blue);
+                    }
+                }
+            }
+        }
+
+        .content2{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 10px;
+            background-color: var(--very-dark-blue);
+            padding: 25px;
+
+            .title-content2{
+                color: var(--soft-orange);
+                font-size: 30px;
+            }
+            .content2-items{
+                
+                .item1, .item2, .item3{
+                    border-bottom: 2px solid var(--dark-grayish-blue);
+                    h3{
+                        color: var(--off-white);
+                        padding: 20px 0px 10px 0px;
+                        cursor: pointer;
+
+                        &:hover, :active{
+                            color: var(--soft-orange);
+                        }
+                    }
+                    p{
+                        color: var(--dark-grayish-blue);
+                        padding: 10px 0px 30px 0px;
+                    }
+                }
+                .item3{
+                    border: none;
+                }
+            }
+        }
+    }
+
+    .articulos-items{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 20px 0px 20px 0px;
+        gap: 30px;
+
+        .items-content{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            .img{
+                img{
+                    width: 100px;
+                    height: 120px;
+                }
+            }
+
+            .text-articles{
+                grid-column: span 2;
+                span{
+                    color: var(--grayish-blue);
+                    font-size: 30px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+}
