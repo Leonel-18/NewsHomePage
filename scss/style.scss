@@ -224,7 +224,7 @@ body{
             }
         }
     }
-    
+
 
 
 @media (max-width: 768px){
@@ -357,7 +357,16 @@ body{
                 .sidebar{
                     height: 200vh;
                     width: 200px;
-                    
+                    animation: open 0.4s ease;
+
+                    @keyframes open {
+                        0%{
+                            width: 100px;
+                        }
+                        100%{
+                            width: 200px
+                        }
+                    }
                 }
             }
         }
