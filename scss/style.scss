@@ -356,17 +356,8 @@ body{
             .navBar{
                 .sidebar{
                     height: 200vh;
-                    width: 200px;
-                    animation: open 0.4s ease;
+                    width: 250px;
 
-                    @keyframes open {
-                        0%{
-                            width: 100px;
-                        }
-                        100%{
-                            width: 200px
-                        }
-                    }
                 }
             }
         }
